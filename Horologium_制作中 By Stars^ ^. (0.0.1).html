@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horologium</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .clock {
+            position: relative;
+            width: 600px; /* 1.5 times the original size */
+            height: 600px; /* 1.5 times the original size */
+            border: 5px solid #000;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clock::after {
+            content: 'Horologium';
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .clock div {
+            position: absolute;
+            width: 75px; /* 1.5 times the original size */
+            height: 75px; /* 1.5 times the original size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: #ccc;
+            color: rgb(0, 61, 153); /* changed back to ultramarine */
+            font-weight: bold;
+            font-size: 1.5em; /* 1.5 times the original size */
+        }
+        .clock div:hover {
+            background-color: #aaa;
+        }
+        .project12 { transform: rotate(-90deg) translate(255px) rotate(90deg); }
+        .project1 { transform: rotate(-60deg) translate(255px) rotate(60deg); }
+        .project2 { transform: rotate(-30deg) translate(255px) rotate(30deg); }
+        .project3 { transform: rotate(0deg) translate(255px) rotate(0deg); }
+        .project4 { transform: rotate(30deg) translate(255px) rotate(-30deg); }
+        .project5 { transform: rotate(60deg) translate(255px) rotate(-60deg); }
+        .project6 { transform: rotate(90deg) translate(255px) rotate(-90deg); }
+        .project7 { transform: rotate(120deg) translate(255px) rotate(-120deg); }
+        .project8 { transform: rotate(150deg) translate(255px) rotate(-150deg); }
+        .project9 { transform: rotate(180deg) translate(255px) rotate(-180deg); }
+        .project10 { transform: rotate(210deg) translate(255px) rotate(-210deg); }
+        .project11 { transform: rotate(240deg) translate(255px) rotate(-240deg); }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="project12" onclick="navigateToProject(12)">XII</div>
+        <div class="project1" onclick="navigateToProject(1)">I</div>
+        <div class="project2" onclick="navigateToProject(2)">II</div>
+        <div class="project3" onclick="navigateToProject(3)">III</div>
+        <div class="project4" onclick="navigateToProject(4)">IV</div>
+        <div class="project5" onclick="navigateToProject(5)">V</div>
+        <div class="project6" onclick="navigateToProject(6)">VI</div>
+        <div class="project7" onclick="navigateToProject(7)">VII</div>
+        <div class="project8" onclick="navigateToProject(8)">VIII</div>
+        <div class="project9" onclick="navigateToProject(9)">IX</div>
+        <div class="project10" onclick="navigateToProject(10)">X</div>
+        <div class="project11" onclick="navigateToProject(11)">XI</div>
+    </div>
+
+    <script>
+        function navigateToProject(projectNumber) {
+            alert("Navigating to project " + projectNumber);
+            // Replace the alert with the actual navigation code, e.g.,
+            // window.location.href = `project${projectNumber}.html`;
+        }
+    </script>
+</body>
+</html>
